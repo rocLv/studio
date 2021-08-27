@@ -1,0 +1,3 @@
+:5020 {
+  reverse_proxy unix//Users/i/Library/Containers/com.docker.docker/Data/docker.raw.sock
+}
