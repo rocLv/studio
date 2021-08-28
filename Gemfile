@@ -13,7 +13,7 @@ gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
-
+gem 'bootstrap', '~> 5.1.0'
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara'
