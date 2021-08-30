@@ -1,20 +1,619 @@
-<nav class="nav flex flex-wrap items-center justify-between px-4">
-  <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
-    <span class="font-semibold text-xl tracking-tight">Blog</span>
+<!-- header -->
+<div class="header @@classList">
+  <!-- navigation start -->
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-default">
+      <a class="navbar-brand" href="index.html">
+        <%= image_tag "logo.svg" %>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default"
+        aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar mt-0"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-default">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default"
+          aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="navbar-nav ml-auto mr-lg-3 ">
+          <li class="nav-item dropdown disabled">
+            <a class="nav-link d-lg-none" href="#!">
+              Menu
+            </a>
+          </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#!" id="menu-1" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false" data-display="static">
+              Homepages
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-xl-left  dropdown-menu-arrow "
+              aria-labelledby="menu-1">
+              <li class="">
+                <a class="dropdown-item" href="gindex.html">
+
+
+                  <h4 class="mb-0 h5">Coach</h4>
+                  <p class="text-muted mb-0 font-12">
+                    Motivational Speaker
+                  </p>
+
+
+                </a>
+
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="gpages/business-coach.html">
+
+
+                  <h4 class="mb-0 h5">Business Coach</h4>
+                  <p class="text-muted mb-0 font-12">
+                    Consulting Business Coach
+                  </p>
+
+
+                </a>
+
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="gpages/life-coach.html">
+
+
+                  <h4 class="mb-0 h5">Life Coach</h4>
+                  <p class="text-muted mb-0 font-12">
+                    LifeCoach layout design.
+                  </p>
+
+
+                </a>
+
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="gpages/ceo-coach.html">
+
+
+                  <h4 class="mb-0 h5">CEO Coaching</h4>
+                  <p class="text-muted mb-0 font-12">
+                    Excellent in CEO Coaching
+                  </p>
+
+
+                </a>
+
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#!" id="menu-2" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false" data-display="static">
+              Pages
+            </a>
+            <ul class="dropdown-menu  dropdown-menu-right dropdown-menu-xl-left  dropdown-menu-arrow "
+              aria-labelledby="menu-2">
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  <div class="d-flex align-items-center">
+                    <div class="mr-3 icon-shape icon-lg rounded-circle bg-light">
+                      <i class="bi bi-stack font-24"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0 h5">Program</h4>
+                      <p class="text-muted mb-0 font-12">
+                        Coaching program & details
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/program-grid.html">
+                      Grid</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/program-list.html">
+                      List </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/program-single.html">
+                      Single</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  <div class="d-flex align-items-center">
+                    <div class="mr-3 icon-shape icon-lg rounded-circle bg-light">
+                      <i class="bi bi-calendar3 font-24"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0 h5">Events</h4>
+                      <p class="text-muted mb-0 font-12">
+                        Keynote Speakers Events
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/events.html">
+                      List</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/event-single.html">
+                      Single</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  <div class="d-flex align-items-center">
+                    <div class="mr-3 icon-shape icon-lg rounded-circle bg-light">
+                      <i class="bi bi-mic-fill font-24"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0 h5">Podcast</h4>
+                      <p class="text-muted mb-0 font-12">
+                        Imporve Yourself to listen podcast.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/podcast.html">
+                      List</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/podcast-thumbnail.html">
+                      Thumbnail</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/podcast-single.html">
+                      Single</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  <div class="d-flex align-items-center">
+                    <div class="mr-3 icon-shape icon-lg rounded-circle bg-light">
+                      <i class="bi bi-file-earmark-richtext-fill font-24"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0 h5">Courses</h4>
+                      <p class="text-muted mb-0 font-12">
+                        Find the motivational courses
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/course-thumbnail.html">
+                      Grid</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/course-single.html">
+                      Single</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  <div class="d-flex align-items-center">
+                    <div class="mr-3 icon-shape icon-lg rounded-circle bg-light">
+                      <i class="bi bi-gear-fill font-24"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0 h5">Utilities</h4>
+                      <p class="text-muted mb-0 font-12">
+                        Additional Pages
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/pricing.html">
+                      Pricing </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/about-me.html">
+                      About me</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/team-page.html">
+                      Team</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/contact.html">
+                      Contact</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/error-page.html">
+                      Error</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/terms-and-condition.html">
+                      Terms & Condition<span class="text-primary font-12 ml-1">(New)</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="menu-3" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left "
+              aria-labelledby="menu-3">
+              <li>
+                <a class="dropdown-item" href="gpages/blog.html">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/blog-author.html">
+                  Blog Author
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/blog-category.html">
+                  Blog Category
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/blog-classic.html">
+                  Blog Classic
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/blog-single.html">
+                  Blog Single
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="menu-4" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left "
+              aria-labelledby="menu-4">
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">
+                  <h4 class="h5 mb-0">Case Study <span class="text-primary font-12 ml-1">(New)</span></h4>
+                  <p class="text-muted mb-0 font-12">
+                  Case Study Element Design
+                  </p>
+
+
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/case-studies.html">
+                      Case Study</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/case-study-single.html">
+                      Single</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+
+
+                  <h4 class="mb-0 h5">Help Center </h4>
+                  <p class="text-muted mb-0 font-12">
+                    How can we help?
+                  </p>
+
+
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/help-center.html">
+                      Help</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/help-center-category.html">
+                      Category</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/help-center-article.html">
+                      Category Article</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/help-center-profile-member.html">
+                      Help Center Profile</a>
+                  </li>
+                </ul>
+              </li>
+
+
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <h4 class="mb-0 h5">Webinar</h4>
+                  <span class="text-muted mb-0 font-12">
+                    Webinar Landing Page Design
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/coach-webinar.html">
+                      Webinar List </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/coach-webinar-single.html">
+                      Webinar Single </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/coach-webinar-booking.html">
+                      Webinar Booking </a>
+                  </li>
+
+
+                </ul>
+
+              </li>
+
+              <li class="">
+                <a class="dropdown-item" href="gpages/book-download-page.html">
+
+                  <h4 class="mb-0 h5">Download Book</h4>
+                  <span class="text-muted mb-0 font-12">
+                    Download the book that guide your life lession.
+                  </span>
+
+
+                </a>
+
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="gpages/stories.html">
+
+                  <div class="">
+                    <h4 class="mb-0 h5">Success Stories</h4>
+                    <p class="text-muted mb-0 font-12">
+                      See what our clients say & success stories.
+                    </p>
+                  </div>
+
+                </a>
+
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="gpages/booking-page.html">
+
+                  <div class="">
+                    <h4 class="mb-0 h5">Free Session Booking</h4>
+                    <p class="text-muted mb-0 font-12">
+                      Your 60-minute Free Coaching Session.
+                    </p>
+                  </div>
+
+                </a>
+
+              </li>
+
+
+
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="menu-5" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left "
+              aria-labelledby="menu-5">
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  Sign In
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/signin-cover.html">
+                      Side Cover </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/signin.html">
+                      Basic</a>
+                  </li>
+
+
+                </ul>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  Sign Up
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/signup-cover.html">
+                      Side Cover </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/signup.html">
+                      Basic</a>
+                  </li>
+
+
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/verify-code.html">
+                  Verify Code
+                </a>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  Password Reset
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/password-reset-cover.html">
+                      Side Cover </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/password-reset.html">
+                      Basic</a>
+                  </li>
+
+
+                </ul>
+              </li>
+              <li class="dropdown-submenu ">
+                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                  Setting
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-profile.html">
+                      Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-subscription.html">
+                      Subscription</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-security.html">
+                      Security</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-notifications.html">
+                      Notifications</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-user.html">
+                      Users</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-payment-plan.html">
+                      Payment Plan</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="gpages/dashboard-payment-history.html">
+                      Payment History</a>
+                  </li>
+
+
+
+                </ul>
+              </li>
+
+
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="menu-6" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left "
+              aria-labelledby="menu-6">
+              <li>
+                <a class="dropdown-item" href="gpages/shop.html">
+                  Product
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/shop-single.html">
+                  Product Single
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/shop-cart.html">
+                  Cart
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/shop-checkout.html">
+                  Checkout
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/shop-empty-cart.html">
+                  Empty Cart
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gpages/shop-order-completed.html">
+                  Order Completed
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="menu-7" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Docs
+            </a>
+            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left  "
+              aria-labelledby="menu-7">
+              <li>
+                <a class="dropdown-item" href="gdocs/index.html">
+                  <div class="d-flex align-items-center">
+                    <span class="mr-3">
+                    <i class="bi bi-file-text-fill font-24"></i>
+
+                    </span>
+                    <div>
+
+                      <h5 class="mb-0">Documentation</h5>
+                      <span class="font-12 text-muted">Customizing and Create</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gdocs/snippet-overview.html">
+                  <div class="d-flex align-items-center">
+                    <span class="mr-3">   <i class="bi bi-layers-fill font-24"></i>
+                    </span>
+                    <div>
+                      <h5 class="mb-0">Components</h5>
+                      <span class="font-12 text-muted">Ready to use list of components</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="gdocs/changelog.html">
+                  <div class="d-flex align-items-center">
+                    <span class="mr-3">
+                      <i class="bi bi-file-earmark-text-fill font-24"></i>
+                    </span>
+                    <div>
+                      <h5 class=" mb-0 ">Changelog <span class="text-primary font-12 ml-1 ">1.1.3</span></h5>
+                      <span class="font-12 text-muted ">All notable changes in track</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-btn ">
+          <a href="gpages/signup.html " class="btn btn-primary btn-sm ">Sign up</a>
+        </div>
+      </div>
+    </nav>
   </div>
-
-  <input class="menu-btn hidden" type="checkbox" id="menu-btn">
-  <label class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none" for="menu-btn">
-    <span class="navicon bg-grey-darkest flex items-center relative"></span>
-  </label>
-
-  <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
-    <li class="border-t md:border-none">
-      <a href="/" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold">Home</a>
-    </li>
-    
-    <li class="border-t md:border-none">
-      <a href="/about/" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">About</a>
-    </li>
-  </ul>
-</nav>
+  <!-- navigation close -->
+</div>

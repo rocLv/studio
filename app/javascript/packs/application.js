@@ -18,4 +18,9 @@ require("channels")
 
 import "controllers"
 import '../css/application.css'
+
 require("bootstrap")
+// require("./libs/prismjs/prism.js")
+// require("./theme.min.js")
+
+import "jquery"
