@@ -1,29 +1,55 @@
-<h2>Sign up</h2>
+<!-- sign up -->
+<div class="min-vh-100 d-flex align-items-center " style="background:url(/assets/register-img.jpg)no-repeat; background-size: cover;">
+	<div class="container">
+		<div class="row">
+			<div class="offset-lg-3 col-lg-6 col-12">
+				<a href="../index.html" class="mb-4 d-flex justify-content-center">
+          <img src="/assets/logo.svg" alt="" /></a>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+				<div class="bg-dark p-4 p-lg-8 rounded-lg text-muted">
+					<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <h1 class="mb-2 text-white">注册</h1>
+            <p class="mb-4">请认真填写注册信息</p>
+						<%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+						<div class="form-group mb-4">
+							<%= f.label "昵称" %><br />
+							<%= f.email_field :nickname, autofocus: true, autocomplete: "nickname",
+                 class: "form-control border-0", placeholder: "昵称" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+						<div class="form-group mb-4">
+							<%= f.label :email %><br />
+							<%= f.email_field :email, autofocus: true, autocomplete: "email",
+                 class: "form-control border-0", placeholder: "Email address" %>
+						</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+						<div class="form-group mb-4">
+							<%= f.label :密码 %>
+							<% if @minimum_password_length %>
+								<em>密码不得低于(<%= @minimum_password_length %> 位)</em>
+							<% end %><br />
+							<%= f.password_field :password, autocomplete: "new-password",
+                   class: "form-control border-0" %>
+						</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+						<div class="form-group mb-4">
+							<%= f.label :确认密码 %><br />
+							<%= f.password_field :password_confirmation, autocomplete: "new-password",
+                   class: "form-control border-0" %>
+						</div>
+
+						<div class="actions mb-4">
+							<%= f.submit "注册", class: "btn btn-primary btn-block pt-2" %>
+						</div>
+					<% end %>
+					<p class="mt-3 mb-3 text-muted font-14">
+					已有账户?请 <a href="signin.html">登陆</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <%= render "devise/shared/links" %>
