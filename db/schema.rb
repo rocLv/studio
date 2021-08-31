@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_022010) do
+ActiveRecord::Schema.define(version: 2021_08_31_063339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "task_options", force: :cascade do |t|
+    t.integer "task_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "answer", default: 0
+    t.integer "weight"
+    t.string "content"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "hint"
+    t.string "desc"
+    t.string "answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.string "pre_script"
+    t.string "after_script"
+    t.integer "weight"
+    t.string "solution"
+    t.string "solution_file"
+    t.string "solution_md"
+    t.string "text"
+    t.string "subtext"
+    t.string "test_type"
+    t.string "after"
+    t.string "before", default: [], array: true
+    t.string "tests", default: [], array: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "nickname"
