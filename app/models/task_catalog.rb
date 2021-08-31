@@ -1,0 +1,2 @@
+class TaskCatalog < ApplicationRecord
+end
