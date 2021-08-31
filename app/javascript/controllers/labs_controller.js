@@ -20,7 +20,7 @@ document.addEventListener("turbolinks:load", () =>{
  fitAddon.fit()
 
  // Attach the socket to term
- term.writeln("Hello from \x1B[1;3;31mxterm.js\n\x1B[0m");
+ term.writeln("Hello from \x1B[1;3;31mtgeek.cn\n\x1B[0m");
  term.write("$ ");
  
  

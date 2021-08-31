@@ -15,6 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 5.1.0'
 gem 'devise'
+gem 'kramdown'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

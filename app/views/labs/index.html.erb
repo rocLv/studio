@@ -1,61 +1,80 @@
 <div id="mmenu_screen" class="container-fluid d-flex">
-<div class="row gx-2 flex-fill">
-  <div class="col-4 border bg-dark p-2 text-white rounded">
-    <ul class="nav nav-tabs nav-fill m-2" id="myTab" role="tablist">
-      <li class="nav-item pl-2" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                                      data-bs-target="#home" type="button" role="tab"
-                                                                                           aria-controls="home" aria-selected="true">
-          任务
-        </button>
-      </li>
-      <li class="nav-item pl-2" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-          提示
-        </button>
-      </li>
-      <li class="nav-item pl-2" role="presentation">
-        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-          答案
-        </button>
-      </li>
-      <li class="nav-item" style="font-size: 1.5em;" role="presentation">
+  <div class="row gx-2 flex-fill">
+    <div class="col-4 border bg-dark p-2 text-white rounded">
+      <ul class="nav nav-tabs m-2" id="myTab" role="tablist">
+        <li class="nav-item pl-2" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#home" type="button" role="tab"
+                                                                                             aria-controls="home" aria-selected="true">
+            任务
+          </button>
+        </li>
+        <li class="nav-item pl-2" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+            提示
+          </button>
+        </li>
+        <li class="nav-item pl-2" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+            答案
+          </button>
+        </li>
+        <li class="nav-item ml-5" style="font-size: 1.5em;" role="presentation">
           <span>
-              <svg class="bi" width="1em" height="1em" fill="currentColor">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
               <use xlink:href="/assets/bootstrap-icons.svg#alarm"></use>
             </svg>
           </span>
           <span class="text-white">&nbsp;00:40</span>
-      </li>
-    </ul>
-    <div class="tab-content m-4" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        home-tab
-      </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        Profile tab
-      </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-    </div>
-  </div>
-
-  <div id="terminal" class="col-8 border bg-dark rounded p-2">
-    <div class="row">
-      <ul class="nav pl-2">
-        <li class="nav-item">
-          <a class="nav-link active text-muted" href="#">Terminal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active text-muted" href="#">+</a>
         </li>
       </ul>
+      <div class="tab-content m-4" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="container">
+            <div class="row">
+              <ul class="nav">
+                <% @task_catalog.count&.times do |i|  %>
+                  <li class="nav-item bg-info m-1 p-1 text-center rounded" style="width: 2rem;">
+                    <%= i + 1 %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="row">
+              <button class="btn btn-primary btn-sm m-3" style="width: 10rem;">下一题</button>
+            </div>
+            <div class="row" style="font-size: 1.5rem;">
+              <%= Kramdown::Document.new(@current_task.text).to_html.html_safe %>
+            </div>
+            <div class="row">
+              <%= @current_task.subtext %>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          Profile tab
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
+    </div>
+
+    <div id="terminal" class="col-8 border bg-dark rounded p-2">
+      <div class="row">
+        <ul class="nav pl-2">
+          <li class="nav-item">
+            <a class="nav-link active text-muted" href="#">Terminal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-muted" href="#">+</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <style type="text/css">
 #mmenu_screen > .row {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 </style>
