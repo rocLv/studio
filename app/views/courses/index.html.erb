@@ -1,0 +1,40 @@
+<!-- hero section -->
+<%= render "layouts/hero" %>
+
+<div class="pt-lg-12 pb-lg-12 py-6 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="d-md-flex justify-content-between mb-3">
+          <div>
+            <h4>交互式课程列表</h4>
+          </div>
+          <div>
+            <!-- sort >
+            <div class="d-inline-block mr-2">
+              <span>Sort by:</span>
+            </div>
+            <div class="d-inline-block">
+              <select class="custom-select">
+                <option selected>Default</option>
+                <option value="1">Popularity</option>
+                <option value="2">Price: low to high</option>
+                <option value="3">Price: high to low</option>
+              </select>
+            </div>
+            <--!>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% @courses.each do |course| %>
+        <%= render "course", course: course %>
+        <!-- course thumbnail -->
+        <!-- course thumbnail -->
+        <!-- course thumbnail -->
+        <!-- course thumbnail -->
+      <% end %>
+    </div>
+  </div>
+</div>

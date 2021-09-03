@@ -1,0 +1,57 @@
+<%= form_with(model: cource, local: true) do |form| %>
+  <% if cource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cource.errors.count, "error") %> prohibited this cource from being saved:</h2>
+
+      <ul>
+        <% cource.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lessons_count %>
+    <%= form.number_field :lessons_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :students_count %>
+    <%= form.number_field :students_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :period %>
+    <%= form.number_field :period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_cent %>
+    <%= form.number_field :price_cent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_price_cent %>
+    <%= form.number_field :current_price_cent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coach_id %>
+    <%= form.number_field :coach_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_field :desc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

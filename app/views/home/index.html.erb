@@ -1,8 +1,25 @@
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
-
-
-<div class="min-h-screen bg-gray-900 py-6 flex flex-col justify-center items-center">
-	<h1 class="mb-2 text-4xl text-red-600 font-extrabold uppercase">Ruby on Rails</h1>
-	<h1 class="mb-12 text-3xl text-blue-500 font-light">GitHub Template</h1>
-	<%= render 'rails_github_template' %>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
 </div>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<script type="text/javascript">
+var toastTrigger = document.getElementById('liveToastBtn')
+var toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', function () {
+    var toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}

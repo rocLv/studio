@@ -1,0 +1,31 @@
+<!-- course thumbnail -->
+<div class="col-xl-4 col-lg-6 col-md-6 col-12">
+  <div class="mb-4">
+    <%= link_to course do %>
+      <img src="<%= course.background_src %>" alt=""
+                class="img-fluid w-100 border-top
+               border-top-5 border-primary rounded-top">
+
+               <%= image_tag course.background_src, class: "img-fluid w-100 border-top
+              border-top-5 border-primary rounded-top" %>
+    <% end %>
+
+    <div class="card-body p-4 border border-top-0 rounded-bottom bg-white">
+      <%= link_to course do %>
+        <h4 class="mb-3"><%= course.name %></h4>
+    <% end %>
+      <p class="font-13 font-weight-bold">
+        <span class="mr-2">
+          共&nbsp<%= course.lessons_count %>&nbsp课
+        </span>
+        <span class="mr-2">累计学习 <%= course.students_count %> 人次</span>
+        <span><%= course.period / 7 %> 周</span>
+      </p>
+      <span class="font-weight-bold text-secondary h4 mb-0">
+        ￥<%= course.price_cent / 100 %>
+      </span>
+    </div>
+  </div>
+
+</div>
+<!-- course thumbnail -->

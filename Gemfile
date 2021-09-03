@@ -13,7 +13,8 @@ gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'bootstrap', '~> 5.1.0'
+gem 'bootstrap', '~> 4.6.0'
+gem 'jquery-rails'
 gem 'devise'
 gem 'kramdown'
 

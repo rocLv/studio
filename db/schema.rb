@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_080656) do
+ActiveRecord::Schema.define(version: 2021_09_02_023654) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "hstore"
   enable_extension "plpgsql"
+
+  create_table "cources", force: :cascade do |t|
+    t.string "name"
+    t.integer "lessons_count"
+    t.integer "students_count"
+    t.integer "period"
+    t.integer "price_cent"
+    t.integer "current_price_cent"
+    t.integer "coach_id"
+    t.string "desc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "background_src"
+  end
+
+  create_table "curriculums", force: :cascade do |t|
+    t.string "title"
+    t.string "phase"
+    t.integer "cource_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sub_curriculums", force: :cascade do |t|
+    t.string "title"
+    t.integer "duration"
+    t.bigint "curriculum_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["curriculum_id"], name: "index_sub_curriculums_on_curriculum_id"
+  end
 
   create_table "task_catalogs", force: :cascade do |t|
     t.string "name"
@@ -53,6 +85,15 @@ ActiveRecord::Schema.define(version: 2021_08_31_080656) do
     t.integer "task_catalog_id"
   end
 
+  create_table "test_sessions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_catalog_id"
+    t.integer "status"
+    t.hstore "answer_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "nickname"
     t.string "email", default: "", null: false
@@ -81,4 +122,5 @@ ActiveRecord::Schema.define(version: 2021_08_31_080656) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "sub_curriculums", "curriculums"
 end
