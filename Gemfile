@@ -17,6 +17,7 @@ gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'kramdown'
+gem 'rvt'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

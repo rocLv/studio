@@ -20,3 +20,6 @@ function trigerTerminal(websock_url){
  term.writeln("Hello from \x1B[1;3;31mtgeek.cn\n\x1B[0m");
  term.write("$ ");
 }
+
+let websock_url = "ws://localhost:5020/containers/fe9e7998d947/attach/ws?stream=1&stdout=1"
+trigerTerminal(websock_url);

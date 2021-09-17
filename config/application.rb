@@ -46,5 +46,7 @@ module Rails6Template
       g.system_specs true
     end
 
+    config.rvt.command = "/bin/sh"
+
   end
 end

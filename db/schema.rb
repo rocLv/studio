@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_02_023654) do
+ActiveRecord::Schema.define(version: 2021_09_06_084900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
   enable_extension "plpgsql"
 
-  create_table "cources", force: :cascade do |t|
+  create_table "courses", id: :bigint, default: -> { "nextval('cources_id_seq'::regclass)" }, force: :cascade do |t|
     t.string "name"
     t.integer "lessons_count"
     t.integer "students_count"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_09_02_023654) do
     t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "course_id"
   end
 
   create_table "task_options", force: :cascade do |t|
