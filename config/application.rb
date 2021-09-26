@@ -46,6 +46,11 @@ module Rails6Template
       g.system_specs true
     end
 
-    config.rvt.command = 'DOCKER_HOST=ssh://root@161.35.99.147 docker exec -it 3025ead0317f /bin/bash'
+    # config.rvt.command = '/bin/zsh'
+    config.to_prepare do
+      Dir.glob("#{Rails.root}/app/overrides/**/*_override.rb").each do |override|
+        require_dependency override
+      end
+    end
   end
 end
