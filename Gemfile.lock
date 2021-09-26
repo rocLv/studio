@@ -15,6 +15,15 @@ GIT
     faker (2.19.0)
       i18n (>= 1.6, < 2)
 
+PATH
+  remote: ../rvt
+  specs:
+    rvt (1.1.0)
+      activemodel (>= 4.0)
+      coffee-rails
+      railties (>= 4.0)
+      sprockets-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -287,11 +296,6 @@ GEM
       rubocop (>= 0.72.0)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
-    rvt (1.1.0)
-      activemodel (>= 4.0)
-      coffee-rails
-      railties (>= 4.0)
-      sprockets-rails
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -389,7 +393,7 @@ DEPENDENCIES
   rubocop (= 0.79.0)
   rubocop-performance
   rubocop-rails (= 2.4.1)
-  rvt
+  rvt!
   sass-rails (>= 6)
   selenium-webdriver
   simplecov

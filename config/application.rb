@@ -46,7 +46,6 @@ module Rails6Template
       g.system_specs true
     end
 
-    config.rvt.command = "/bin/sh"
-
+    config.rvt.command = 'DOCKER_HOST=ssh://root@161.35.99.147 docker exec -it 3025ead0317f /bin/bash'
   end
 end
