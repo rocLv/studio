@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
     "user strict";
 
     // Menu List
