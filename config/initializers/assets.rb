@@ -14,5 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w(labs.css
   application.js
   rvt/application.js
-  rvt/application.css)
+  rvt/application.css
+  task_catalogs.js
+)
 

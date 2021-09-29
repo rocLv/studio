@@ -1,11 +1,11 @@
 class TaskCatalogsController < ApplicationController
-  before_action :set_lab, in: [:show]
+  before_action :set_lab, only: [:show]
 
   def index
-    binding.pry
   end
 
   def show
+    command = "DOCKER_HOST=ssh://root@47.242.11.169 docker exec -it 813fe542bbe1 /bin/bash"
     @console_session = RVT::ConsoleSession.create("/bin/zsh")
   end
 

@@ -18,4 +18,3 @@ require("channels")
 
 import "controllers"
 import '../css/application.css'
-require("./theme.min.js")
