@@ -5,7 +5,7 @@
         <li class="nav-item">
           <a class="nav-link active" id="pills-home-tab"
                data-toggle="pill"
-               href="#pills-hone"  role="tab"
+               href="#pills-task"  role="tab"
                data-turbolinks=false
                aria-controls="home" aria-selected="true">
             任务
@@ -65,9 +65,18 @@
           </div>
         </div>
         <div class="tab-pane fade" id="pills-hint" role="tabpanel" aria-labelledby="profile-tab">
-          Profile tab
+            <div class="row">
+              <%= @current_task.hint.present? ?  @current_task.hint : "No hint" %>
+            </div>
         </div>
-        <div class="tab-pane fade" id="pills-solution" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        <div class="tab-pane fade" id="pills-solution" role="tabpanel"
+           aria-labelledby="contact-tab">
+            <div class="row" style="font-size: 2rem;">
+              <% if @current_task.solution.present? %>
+                <%= Kramdown::Document.new(@current_task.solution).to_html.html_safe %>
+              <% end %>
+            </div>
+         </div>
       </div>
     </div>
 
