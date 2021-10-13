@@ -11,6 +11,7 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <h1 class="mb-2 text-white">欢迎回来</h1>
             <p class="mb-4">请先登陆</p>
+						<%= render "devise/shared/error_messages", resource: resource %>
             <div class="form-group mb-4">
               <%= f.label :email %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email",

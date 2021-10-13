@@ -7,7 +7,15 @@ class TaskCatalogsController < ApplicationController
 
   def show
     command = "DOCKER_HOST=ssh://root@47.242.11.169 docker exec -it 813fe542bbe1 /bin/bash"
-    @console_session = RVT::ConsoleSession.create(command)
+    @console_session = if console = Redis.current.get("#{current_user.id}_rvt")
+                         pid = JSON.parse(console)["slave"]["pid"]
+                         uid = JSON.parse(console)["slave"]["uid"]
+                         RVT::ConsoleSession.find_by_pid_and_uid(pid, uid)
+                       else
+                         session = RVT::ConsoleSession.create(command)
+                         Redis.current.set("#{current_user.id}_rvt", session.to_json)
+                         session
+                       end
   end
 
   private
